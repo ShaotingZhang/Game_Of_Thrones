@@ -33,9 +33,13 @@ def calc_powerlaw(G,kmin):
     plt.figure(figsize=(10,8))
     plt.subplot(211)
     plt.bar(k,ddist, width=0.8, bottom=0, color='b')
+    plt.xlabel("Degree")
+    plt.ylabel("Degree Distribution")
 
     plt.subplot(212)
     plt.loglog(k,cdist)
+    plt.xlabel("Degree")
+    plt.ylabel("Cumulative Degree Distribution")
 
     sub = 0
     for z in range(0,len(ddist) - 1):
@@ -53,7 +57,7 @@ def calc_powerlaw(G,kmin):
         if (sum != 0):
             sum_inv = 1/sum
     alpha = 1 + N * sum_inv # calculate using formula!
-    print ('alpha is %1.2f' %alpha)   
+    print ('alpha is %1.2f' %alpha) 
     plt.show()
 
 def modularity(G,c):
@@ -157,8 +161,9 @@ def main():
                             d = D[i][j]
 
 
-#    uidx,vidx = where(D==d)
-#    path = zen.algorithms.shortest_path.pred2path_(uidx[1],vidx[1],P)
+    uidx,vidx = where(D==d)
+    path = zen.algorithms.shortest_path.pred2path_(uidx[1],vidx[1],P)
+#    print path
 #    pathname = []
 #    for i in path:
 #            a = G.node_object(i)
