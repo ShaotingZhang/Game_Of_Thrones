@@ -4,7 +4,7 @@ Graph modeling for the social network within episodes of Game of Thrones
 
 ## About this project
 
-We build the social network graph in Game of Thrones and analyze the properties of the social network, such as centrality, diffusion. The Python vesion used here is 2.7. In this graph, each node represents a character in Game of Thrones. each edge of two nodes represents two character appear in the same screen in the script in the episodes. The weight of a edge represents how many times two person appear in the same screen.
+We build the social network graph in Game of Thrones and analyze the properties of the social network, such as centrality, diffusion. The Python vesion used here is 2.7. In this graph, each node represents a character in Game of Thrones. each edge of two nodes represents two character appear in the same scene in the script within the episodes. The weight of a edge represents how many times two person appear in the same scene.
 
 ## How to Run
 
@@ -17,8 +17,6 @@ python2.7 3_step_Diffusion.py # build the diffusion model and see how a message 
 ```
 
 ### Package dependencies (only tested on Mac OSX)
-
-On Mac OS X, you may have an issue with running some packages, you may need to install them, especially for zen package.
 
 ```shell
 pip install numpy
